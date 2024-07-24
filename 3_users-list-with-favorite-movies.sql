@@ -1,7 +1,7 @@
 SELECT
     u.id AS "ID",
     u.username AS "Username",
-    ARRAY_AGG(fm.movie_id) AS "Favorite movie IDs"
+    ROUND(AVG(m.budget), 2) AS "Favorite movie IDs"
 FROM
     users u
 LEFT JOIN
